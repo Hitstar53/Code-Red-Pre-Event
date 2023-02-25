@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Level 1 {% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/level_1.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="cards-container">
+            
+  <!-- <div class="card" onclick="flipCard(this)">
+      <div class="card-front">
+        <h2>Card 1</h2>
+      </div>
+      <div class="card-back" style="background-color: white; color: black;">
+          <p>
+              The truck's tires started to skid as the driver commuted home from his domestic job site.
+          </p>
+      </div>
+  </div> -->
+  <div class="card" onclick="flipCard(this)">
+    <div class="card-front">
+      <h1>N</h1>
+    </div>
+    <div class="card-back" id="B1">
+   
+    </div>
+  </div>
+  <div class="card" onclick="flipCard(this)">
+    <div class="card-front">
+      <h1>D</h1>
+    </div>
+    <div class="card-back" id="B2">
+      
+    </div>
+  </div>
+  
+</div>
+<div class="container">
+  <form action="" method="POST">
+    
+    {% csrf_token %}
+     
+    <input type="text" id="answer" class="input-field" placeholder="Team Name" name="team_name" required>
+     <input type="hidden" value="no" id="bool" name="bool">
+    <button class="start-button" onclick="check()" type="submit" >SUBMIT</button>
+    
+    
+  </form>
+  
+
+</div>
+
+{% endblock %}
+{% block typing %}
+<div class="text-wrapper" id="text-wrap">
+
+  <pre>
+    Two cards in hand, with numbers to command,
+    Divide and decrypt, a word to understand.
+    N and D, the letters you see,
+    With A1Z26, the word will be key.
+  </pre>
+
+</div>
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'js/level_1.js' %}"></script>
+{% endblock %}

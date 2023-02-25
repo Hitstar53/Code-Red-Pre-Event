@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} OCL Pre-event {% endblock %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block content%}
+
+<h1 class="title">BLUE LOCK</h1>
+<div class="container">
+    <form action="" method="POST">
+      
+      {% csrf_token %}
+       
+      <input type="text" id="team-name" class="input-field" placeholder="Team Name" name="team_name" required>
+      <button class="start-button" type="submit">START</button>
+      
+      
+    </form>
+    
+
+  </div>
+  
+  
+  
+  
+  
+{% endblock %}
+
+{% block typing %}
+
+<div class="text-wrapper" id="text-wrap">
+
+    <p>
+        Write the names of both the team members in following format no spaces and no caps.For eg:jackandjill.
+    </p>
+
+</div>
+
+{% endblock %}
+
+{% block hint %}
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'js/index.js' %}"></script>
+{% endblock %}

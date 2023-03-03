@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Blue Lock {% endblock %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/prelevel_1.css' %}">
+{% endblock %}
+{% block content%}
+
+<h1 class="title">BLUE LOCK</h1>
+<div class="container">
+    <form action="" method="POST">
+        {% csrf_token %}
+    <button class="start-button" type="submit">NEXT</button>
+    </form>
+</div>
+ 
+{% endblock %}
+{% block typing %}
+ <div class="text-wrapper">
+
+    <p>
+        I see that you passed!! You are just one level close to the surprise now. |
+        Are you ready? |
+        Here's the clue for the next level: |
+        |
+        Two cards in hand, with numbers to command,|
+        Divide and decrypt, a word to understand.|
+        N and D, the letters you see,|
+        With A1Z26, the word will be key.|
+    </p>
+
+ </div>
+{% endblock %}
+{% block hint %}
+{% endblock %}
+{% block script %}
+<script src="{% static 'js/prelevel_1.js' %}"></script>
+{% endblock %}

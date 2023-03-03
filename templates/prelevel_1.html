@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Blue Lock{% endblock %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/prelevel_1.css' %}">
+{% endblock %}
+{% block content%}
+<h1 class="title">BLUE LOCK</h1>
+<div class="container">
+    <form action="" method="POST">
+        {% csrf_token %}
+    <button class="start-button" type="submit">NEXT</button>
+    </form>
+</div>
+{% endblock %}
+{% block typing %}
+
+<div class="text-wrapper">
+    <p>
+        As soon as you read this message, a brick comes flying through the window.|
+        You look at the take a look at the brick.There's a paper attached to it.|
+        You take the paper and read it.|
+        One side of the paper is: |
+        |
+        Four letters that can set you free.|
+        On a T9 pad, press them fast,|
+        And find the key, you'll be aghast.|
+    </p>
+</div>
+
+{% endblock %}
+{% block hint %}
+{% endblock %}
+{% block script %}
+<script src="{% static 'js/prelevel_1.js' %}"></script>
+{% endblock %}

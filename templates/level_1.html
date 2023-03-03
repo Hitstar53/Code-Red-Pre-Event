@@ -1,58 +1,41 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %} Level 1 {% endblock %}
+{% block title %} Level 2 {% endblock %}
 {% block style %}
-    <link rel="stylesheet" href="{% static 'css/level_1.css' %}">
+<link rel="stylesheet" href="{% static 'css/level_1.css' %}">
 {% endblock %}
-
-{% block content %}
-
-<div class="cards-container">
-            
-  <!-- <div class="card" onclick="flipCard(this)">
-      <div class="card-front">
-        <h2>Card 1</h2>
-      </div>
-      <div class="card-back" style="background-color: white; color: black;">
-          <p>
-              The truck's tires started to skid as the driver commuted home from his domestic job site.
-          </p>
-      </div>
-  </div> -->
-  <div class="card" onclick="flipCard(this)">
-    <div class="card-front">
-      <h1>N</h1>
-    </div>
-    <div class="card-back" id="B1">
-   
-    </div>
-  </div>
-  <div class="card" onclick="flipCard(this)">
-    <div class="card-front">
-      <h1>D</h1>
-    </div>
-    <div class="card-back" id="B2">
-      
-    </div>
-  </div>
-  
-</div>
-<div class="container">
-  <form action="" method="POST">
-    
+{% block content%}
+<form action="" method="POST">
     {% csrf_token %}
-     
-    <input type="text" id="answer" class="input-field" placeholder="Team Name" name="team_name" required>
-     <input type="hidden" value="no" id="bool" name="bool">
-    <button class="start-button" onclick="check()" type="submit" >SUBMIT</button>
-    
-    
-  </form>
+<input type="text" id="num-input" name="num" style="position: absolute;">
+<div class="numpad">
+    <button class="num">1 <br>_</button>
+    <button class="num">2 <br>ABC</button>
+    <button class="num">3 <br>DEF</button>
+    <button class="num">4 <br>GHI</button>
+    <button class="num">5 <br>LMN</button>
+    <button class="num">6 <br>OPQ</button>
+
+    <button class="num">7 <br>RST</button>
+    <button class="num">8 <br>UVW</button>
+    <button class="num">9 <br>XYZ</button>
+    <button class="letter"id="del" >Delete</button>
+    <button class="num">0</button>
+    <button class="letter" type="submit" id="enter" >Enter</button>
+  </div>
+</form>
+  
+<div class="image-box">
+    <img src="{% static 'assets/images/paper.png' %}" alt="Your image">
+    <span class="close-btn">&times;</span>
+  </div>
   
 
-</div>
-
+{% endblock %}
+{% block typing %}
+{% endblock %}
+{% block hint %}
 {% endblock %}
 {% block script %}
-    <script src="{% static 'js/level_1.js' %}"></script>
+<script src="{% static 'js/level_1.js' %}"></script>
 {% endblock %}

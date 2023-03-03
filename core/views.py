@@ -20,7 +20,8 @@ def home(request):
         else:
             user = User.objects.create_user(username=username, password=None)
             user.save()
-            team = Team.objects.create(team_name=team_name, user=user)
+            t = int(datetime.now().microsecond)
+            team = Team.objects.create(team_name=team_name, user=user,time_taken=t)
             team.save()
             
            
@@ -62,6 +63,10 @@ def level2(request):
         if bl == "no":
             return redirect('level2')
         elif bl == "yes":
+            team = Team.objects.get(user=request.user)
+            t = int(datetime.now().microsecond)
+            team.time_taken = str(t - int(team.time_taken))
+            team.save()
             return redirect('last')
     return render(request, 'level_2.html')
     

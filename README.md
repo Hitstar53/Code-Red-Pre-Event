@@ -1,5 +1,6 @@
 # Code-Red-Pre-Event
 Pre event website for Code Red Event - Oculus Coding League
+<<<<<<< HEAD
 
 Page 1:
 This page contains an input box in which players have to input the username as written
@@ -14,3 +15,5 @@ It will display a poem which will foreshadow the main event.
 The winners will be decided by time remaining
 
 
+=======
+>>>>>>> a58dc64 (Final)

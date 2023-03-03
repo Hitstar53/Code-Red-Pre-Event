@@ -207,32 +207,19 @@ stopwatch("stopwatch");
 // pre event: 2
 const textWrapper = document.querySelector('.text-wrapper p');
 let text = textWrapper.innerHTML;
+text = text.replace(/<br>/g, '|'); // Replace <br> tags with |
 textWrapper.innerHTML = "";
 
 let i = 0;
 const typing = setInterval(() => {
   if (i < text.length) {
-    textWrapper.innerHTML += text.charAt(i);
+    if (text.charAt(i) === '|') { // Replace | with <br>
+      textWrapper.innerHTML += '<br>';
+    } else {
+      textWrapper.innerHTML += text.charAt(i);
+    }
     i++;
   } else {
     clearInterval(typing);
-  }
-}, 50);
-
-const textWrapper2 = document.querySelector('.text-wrapper pre');
-let text2 = textWrapper2.innerHTML;
-textWrapper2.innerHTML = "";
-let j=0;
-const typing2 = setInterval(() => {
-  if (j < text2.length) {
-    if (text2.charAt(j)=="," || text2.charAt(j)==".") 
-    {
-        //add a line break in the html
-        textWrapper2.innerHTML += text2.charAt(j) + "<br>";
-    }
-    textWrapper2.innerHTML += text2.charAt(j);
-    j++;
-  } else {
-    clearInterval(typing2);
   }
 }, 50);

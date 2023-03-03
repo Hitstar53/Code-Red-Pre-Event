@@ -1,0 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+.title
+  {
+	  font-size: 3rem;
+	  color: rgb(2, 2, 52);
+	  margin-bottom: 2rem;
+	  margin-top: 4rem;
+	  justify-content: center;
+	  align-items: center;
+	  position: absolute;
+	  font-family: 'Russo One', sans-serif;
+	  margin-left: 40.5rem;
+  }
+  

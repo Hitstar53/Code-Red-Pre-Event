@@ -26,7 +26,10 @@ SECRET_KEY = 'django-insecure-sd1d!rcn#*_#zfjlp-q8il+zf0zam!92o5uhw^xjj6z!g=3%wv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'https://code-red-pre-event-production.up.railway.app/',
+    '*',
+]
 
 
 # Application definition

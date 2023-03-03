@@ -27,6 +27,7 @@ SECRET_KEY = 'django-insecure-sd1d!rcn#*_#zfjlp-q8il+zf0zam!92o5uhw^xjj6z!g=3%wv
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    'https://code-red-pre-event-production.up.railway.app',
     'https://code-red-pre-event-production.up.railway.app/',
     '*',
 ]

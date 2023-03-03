@@ -11,6 +11,7 @@ const words =[
     {id:6,word:'fear',N:13025059,D:50000000},
     {id:7,word:'hex',N:120131,D:250000},
     {id:8,word:'dock',N:4150311,D:100000000},
+     
 
 
 ]

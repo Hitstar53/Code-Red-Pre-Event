@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+$cellSize: 40px;
+$cellFalseColor: #1976D2;
+$cellTrueColor: #FFB300;
+$cellFalseBorderColor: #1565C0;
+$cellTrueBorderColor: #FFA000;
+$cellAnswerColorFalse: #795548;
+$cellAnswerColorTrue: #CDDC39;
+$cellTextColor: #FFF;
+$gridBackgroundColor: #666;
+
+body {
+  user-select: none;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#grid {
+  text-align: start;
+  display: inline-block;
+  background: $gridBackgroundColor;
+  border-radius: $cellSize / 8;
+
+  span {
+    margin: $cellSize / 8;
+    border-radius: $cellSize / 8;
+    text-align: center;
+    width: $cellSize;
+    height: $cellSize;
+    display: inline-block;
+    font-size: $cellSize / 2;
+    color: $cellTextColor;
+    line-height: $cellSize;
+    border: solid 3px;
+
+    &.back {
+      border-color: #333;
+      background: #333;
+      color: #FFF;
+      font-weight: 900;
+    }
+
+    &[value = '0'] {
+      background: $cellFalseColor;
+      border-color: $cellFalseBorderColor;
+    }
+    &[value = '1'] {
+      background: $cellTrueColor;
+      border-color: $cellTrueBorderColor;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: .75;
+    }
+    &:active {
+      opacity: .95;
+    }
+    &.answer {
+      &:hover, &:active {
+        cursor: default;
+        opacity: 1;
+      }
+      &[answer = 'false'] {
+        border-color: $cellAnswerColorFalse;
+        background: $cellAnswerColorFalse;
+      }
+      &[answer = 'true'] {
+        border-color: $cellAnswerColorTrue;
+        background: $cellAnswerColorTrue;
+      }
+    }
+  }
+}
+
+#start {
+  background: $gridBackgroundColor;
+  display: inline-block;
+  border-radius: $cellSize / 8;
+  p {
+    color: #FFF;
+    font-size: 10px;
+    margin: 0;
+    &.title {
+      font-size: 25px;
+      margin: 20px;
+      margin-bottom: 5px;
+    }
+    &.select {
+      font-size: 20px;
+      margin: 20px;
+      margin-bottom: 5px;
+    }
+  }
+  .level {
+    display: inline-block;
+    width: $cellSize;
+    height: $cellSize;
+    background: $cellFalseColor;
+    margin: $cellSize / 8;
+    border-radius: $cellSize / 8;
+    font-size: $cellSize / 2;
+    color: $cellTextColor;
+    line-height: $cellSize;
+    border: solid 3px $cellFalseBorderColor;
+    &:hover {
+      cursor: pointer;
+      opacity: .75;
+    }
+    &:active {
+      opacity: .95;
+    }
+  }
+}
+
+#victory {
+  background: $gridBackgroundColor;
+  display: inline-block;
+  border-radius: $cellSize / 8;
+  p {
+    color: #FFF;
+    &.title {
+      font-size: 25px;
+      margin: 20px;
+      margin-bottom: 5px;
+    }
+    &.time {
+      font-size: 20px;
+      margin: 20px;
+      margin-bottom: 5px;
+    }
+  }
+  .retry {
+    display: inline-block;
+    height: $cellSize;
+    background: $cellFalseColor;
+    margin: $cellSize / 8;
+    padding: 10px 20px;
+    border-radius: $cellSize / 8;
+    font-size: $cellSize / 2;
+    color: $cellTextColor;
+    line-height: $cellSize;
+    border: solid 3px $cellFalseBorderColor;
+    &:hover {
+      cursor: pointer;
+      opacity: .75;
+    }
+    &:active {
+      opacity: .95;
+    }
+  }
+}

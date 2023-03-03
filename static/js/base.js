@@ -205,34 +205,21 @@ stopwatch("stopwatch");
 // var hints
 // default: 3
 // pre event: 2
-const textWrapper = document.querySelector('.text-wrapper p');
+const textWrapper = document.querySelector('.text-wrapper ');
 let text = textWrapper.innerHTML;
 textWrapper.innerHTML = "";
 
 let i = 0;
 const typing = setInterval(() => {
   if (i < text.length) {
+    if (text.charAt(i) === '|') 
+      {textWrapper.innerHTML += '<br>';}
+    else{
     textWrapper.innerHTML += text.charAt(i);
     i++;
+    }
   } else {
     clearInterval(typing);
   }
 }, 50);
 
-const textWrapper2 = document.querySelector('.text-wrapper pre');
-let text2 = textWrapper2.innerHTML;
-textWrapper2.innerHTML = "";
-let j=0;
-const typing2 = setInterval(() => {
-  if (j < text2.length) {
-    if (text2.charAt(j)=="," || text2.charAt(j)==".") 
-    {
-        //add a line break in the html
-        textWrapper2.innerHTML += text2.charAt(j) + "<br>";
-    }
-    textWrapper2.innerHTML += text2.charAt(j);
-    j++;
-  } else {
-    clearInterval(typing2);
-  }
-}, 50);

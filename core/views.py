@@ -5,7 +5,7 @@ from django.shortcuts import redirect
 from django.contrib.auth.models import User
 from django.contrib import auth
 from django.contrib.auth import authenticate
-
+from datetime import datetime
 # Create your views here.
 
 def home(request):
@@ -22,6 +22,7 @@ def home(request):
             user.save()
             team = Team.objects.create(team_name=team_name, user=user)
             team.save()
+            
            
             auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
             return redirect('level1')

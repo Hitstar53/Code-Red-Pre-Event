@@ -9,9 +9,12 @@ class Team(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     team_name = models.CharField(max_length=100, default='team')
-    time_taken = models.IntegerField(default=0)
-
+    time_taken = models.TimeField(default=datetime.now)
+    
     def __str__(self):
-        return self.team_name | self.time_taken
+        return self.team_name 
+    
+
+
     
 

@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block content %}
+<input type="number" id="endtime" value="{{team.real_end_time}}" hidden>
 
 <div class="cards-container">
             
@@ -42,9 +43,9 @@
     
     {% csrf_token %}
      
-    <input type="text" id="answer" class="input-field" placeholder="Team Name" name="team_name" required>
+    <input type="text" id="answer" class="input-field" placeholder="Word" name="team_name" required>
      <input type="hidden" value="no" id="bool" name="bool">
-    <button class="start-button" onclick="check()" type="submit" >SUBMIT</button>
+    <button class="start-button" onclick="check()" type="submit" id="enter">SUBMIT</button>
     
     
   </form>

@@ -5,11 +5,12 @@
 <link rel="stylesheet" href="{% static 'css/prelevel_1.css' %}">
 {% endblock %}
 {% block content%}
+<input type="number" id="endtime" value="{{team.real_end_time}}" hidden>
 <h1 class="title">BLUE LOCK</h1>
 <div class="container">
     <form action="" method="POST">
         {% csrf_token %}
-    <button class="start-button" type="submit">NEXT</button>
+    <button class="start-button" type="submit" id="enter">NEXT</button>
     </form>
 </div>
 {% endblock %}

@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="{% static 'css/level_1.css' %}">
 {% endblock %}
 {% block content%}
+<input type="number" id="endtime" value="{{team.real_end_time}}" hidden>
 <form action="" method="POST">
     {% csrf_token %}
 <input type="text" id="num-input" name="num" style="position: absolute;">

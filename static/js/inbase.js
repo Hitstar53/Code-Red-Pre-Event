@@ -151,27 +151,76 @@ function countdown(elementName, hours, minutes, seconds) {
     updateTimer();
 }
 
+function stopwatch(elementName) {
+    //build a stopwatch that keeps going till a stop function is not called
+    var minutes = 00;
+    var seconds = 00;
+    var tens = 00;
+    var appendTens = document.getElementById("tens")
+    var appendSeconds = document.getElementById("seconds")
+    var appendMinutes = document.getElementById("minutes")
+    const btn = document.getElementById("hint");
+    var Interval;
+    Interval = setInterval(startTimer, 10);
+    //generate a similar function but it should also display minutes
+    function startTimer() {
+        tens++;
+        if (tens <= 9) {
+            appendTens.innerHTML = "0" + tens;
+        }
+        if (tens > 9) {
+            appendTens.innerHTML = tens;
+        }
+        if (tens > 99) {
+            seconds++;
+            appendSeconds.innerHTML = "0" + seconds;
+            tens = 0;
+            appendTens.innerHTML = "0" + 0;
+        }
+        if (seconds > 9) {
+            appendSeconds.innerHTML = seconds;
+        }
+        if (seconds > 59) {
+            minutes++;
+            appendMinutes.innerHTML = "0" + minutes;
+            seconds = 0;
+            appendSeconds.innerHTML = "0" + 0;
+        }
+        if (minutes>0) {
+            btn.disabled = false;
+            btn.style.border = "none";
+            btn.style.color = "black";
+            btn.style.backgroundColor = "yellow";
+            btn.style.cursor = "pointer";
+        }
+        if (minutes < 9) {
+            appendMinutes.innerHTML = "0" + minutes;
+        }
+        if (minutes > 9) {
+            appendMinutes.innerHTML = minutes;
+        }
+    }
+    
+}
+
+// let time_now = parseInt(new Date().getUTCSeconds());
+// let time_end = parseInt(new Date().getUTCSeconds() + 2*60*60);
+// time_diff = time_end - time_now;
+// console.log(time_now,time_end,time_diff);
+// //time diff is in seconds
+// let hr = Math.floor(time_diff/3600);
+// let min = Math.floor((time_diff%3600)/60);
+// let sec = Math.floor((time_diff%3600)%60);
+// console.log(hr, min, sec);
 
 
-let time_now = parseInt(new Date().getUTCSeconds());
-let time_end = parseInt(parseInt(document.getElementById("endtime").value)/1000000);
-time_diff = time_end - time_now;
-console.log(time_now,time_end,time_diff);
-//time diff is in seconds
-let hr = Math.floor(time_diff/3600);
-let min = Math.floor((time_diff%3600)/60);
-let sec = Math.floor((time_diff%3600)%60);
-console.log(hr, min, sec);
-
-
-countdown("2h-countdown", hr, min, sec);
+// countdown("2h-countdown", 2, 0, 0);
 // stopwatch("stopwatch");
 
 // Stopwatch = 10 mins
 // var hints
 // default: 3
 // pre event: 2
-
 const textWrapper = document.querySelector('.text-wrapper p');
 let text = textWrapper.innerHTML;
 text = text.replace(/<br>/, '|'); // Replace <br> tags with |
@@ -190,4 +239,3 @@ const typing = setInterval(() => {
     clearInterval(typing);
   }
 }, 20);
-

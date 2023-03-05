@@ -35,7 +35,6 @@ ALLOWED_HOSTS = [
 CSRF_TRUSTED_ORIGINS = [
     'https://code-red-pre-event-production.up.railway.app',
     'https://code-red-pre-event-production.up.railway.app/',
-    '*',
 ]
 
 # Application definition

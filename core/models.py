@@ -14,6 +14,7 @@ class Team(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     team_name = models.CharField(max_length=100, default='team')
     time_taken = models.IntegerField(default=0)
+    real_end_time = models.IntegerField(default=int(datetime.now().microsecond) + 2*60*60*1000000)
     
     def __str__(self):
         return self.team_name + " | " + str(self.time_taken)

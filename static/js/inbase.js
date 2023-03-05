@@ -203,19 +203,19 @@ function stopwatch(elementName) {
     
 }
 
-let time_now = parseInt(new Date().getUTCSeconds());
-let time_end = parseInt(parseInt(document.getElementById("endtime").value)/1000000);
-time_diff = time_end - time_now;
-console.log(time_now,time_end,time_diff);
-//time diff is in seconds
-let hr = Math.floor(time_diff/3600);
-let min = Math.floor((time_diff%3600)/60);
-let sec = Math.floor((time_diff%3600)%60);
-console.log(hr, min, sec);
+// let time_now = parseInt(new Date().getUTCSeconds());
+// let time_end = parseInt(new Date().getUTCSeconds() + 2*60*60);
+// time_diff = time_end - time_now;
+// console.log(time_now,time_end,time_diff);
+// //time diff is in seconds
+// let hr = Math.floor(time_diff/3600);
+// let min = Math.floor((time_diff%3600)/60);
+// let sec = Math.floor((time_diff%3600)%60);
+// console.log(hr, min, sec);
 
 
-countdown("2h-countdown", hr, min, sec);
-stopwatch("stopwatch");
+// countdown("2h-countdown", 2, 0, 0);
+// stopwatch("stopwatch");
 
 // Stopwatch = 10 mins
 // var hints

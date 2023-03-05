@@ -14,31 +14,43 @@ def home(request):
         username = team_name
         #check if the user exists if it does login and if they don't create a new user
         if User.objects.filter(username=username).exists():
+            
             user = User.objects.get(username=username)
             auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-            return redirect('prelevel1')
+            team = Team.objects.get(user=request.user)
+            team.real_end_time = int(datetime.now().microsecond) + 2*60*60*1000000
+            return redirect('prelevel0')
         else:
             user = User.objects.create_user(username=username, password=None)
             user.save()
             t = int(datetime.now().microsecond)
-            team = Team.objects.create(team_name=team_name, user=user,time_taken=t)
+            e = t + 2*60*60*1000000
+            team = Team.objects.create(team_name=team_name, user=user,time_taken=t,real_end_time=e)
             team.save()
+
             
            
             auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
             return redirect('prelevel0')
-        
+    
     return render(request, 'index.html')
 
 def prelevel0(request):
     if request.method == 'POST':
         return redirect('prelevel1')
-    return render(request, 'prelevel_0.html')
+    team = Team.objects.get(user=request.user)
+    endtime = team.real_end_time
+    print(endtime)
+    return render(request, 'prelevel_0.html', {'team':team,'endtime':endtime})
 
 def prelevel1(request):
     if request.method == 'POST':
         return redirect('level1')
-    return render(request, 'prelevel_1.html')
+    team = Team.objects.get(user=request.user)
+    endtime = team.real_end_time
+    print(endtime)
+
+    return render(request, 'prelevel_1.html', {'team':team,'endtime':endtime})
 
 def level1(request):
     if request.method == 'POST':
@@ -48,12 +60,19 @@ def level1(request):
             return redirect('prelevel2')
         else:
             return redirect('level1')
-    return render(request, 'level_1.html')
+    team = Team.objects.get(user=request.user)
+    endtime = team.real_end_time
+    print(endtime)
+
+    return render(request, 'level_1.html', {'team':team,'endtime':endtime})
 
 def prelevel2(request):
     if request.method == 'POST':
         return redirect('level2')
-    return render(request, 'prelevel_2.html')
+    team = Team.objects.get(user=request.user)
+    endtime = team.real_end_time
+    print(endtime)
+    return render(request, 'prelevel_2.html', {'team':team,'endtime':endtime})
    
 
 def level2(request):
@@ -68,8 +87,14 @@ def level2(request):
             team.time_taken = str(t - int(team.time_taken))
             team.save()
             return redirect('last')
-    return render(request, 'level_2.html')
+    team = Team.objects.get(user=request.user)
+    endtime = team.real_end_time
+    print(endtime)
+    return render(request, 'level_2.html', {'team':team,'endtime':endtime})
     
     
 def last(request):
-    return render(request, 'last.html')
+    team = Team.objects.get(user=request.user)
+    endtime = team.real_end_time
+    print(endtime)
+    return render(request, 'last.html', {'team':team,'endtime':endtime})

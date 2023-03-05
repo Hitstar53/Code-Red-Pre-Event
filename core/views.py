@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.contrib import auth
 from django.contrib.auth import authenticate
 from datetime import datetime
+from django.contrib.auth.models import Group
 # Create your views here.
 
 def home(request):
@@ -57,6 +58,8 @@ def level1(request):
         num = request.POST.get('num')
         real_num = "22223222"
         if num == real_num:
+            group = Group.objects.get(name='Level 2')
+            request.user.groups.add(group)
             return redirect('prelevel2')
         else:
             return redirect('level1')
@@ -69,10 +72,13 @@ def level1(request):
 def prelevel2(request):
     if request.method == 'POST':
         return redirect('level2')
-    team = Team.objects.get(user=request.user)
-    endtime = team.real_end_time
-    print(endtime)
-    return render(request, 'prelevel_2.html', {'team':team,'endtime':endtime})
+    if request.user.groups.filter(name='Level 2').exists():
+        team = Team.objects.get(user=request.user)
+        endtime = team.real_end_time
+        print(endtime)
+        return render(request, 'prelevel_2.html', {'team':team,'endtime':endtime})
+    else:
+        return redirect('prelevel1')
    
 
 def level2(request):
@@ -87,11 +93,13 @@ def level2(request):
             team.time_taken = str(t - int(team.time_taken))
             team.save()
             return redirect('last')
-    team = Team.objects.get(user=request.user)
-    endtime = team.real_end_time
-    print(endtime)
-    return render(request, 'level_2.html', {'team':team,'endtime':endtime})
-    
+    if request.user.groups.filter(name='Level 2').exists():
+        team = Team.objects.get(user=request.user)
+        endtime = team.real_end_time
+        print(endtime)
+        return render(request, 'level_2.html', {'team':team,'endtime':endtime})
+    else:
+        return redirect('prelevel1')
     
 def last(request):
     team = Team.objects.get(user=request.user)

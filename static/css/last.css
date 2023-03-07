@@ -1,15 +1,88 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
-.title
-  {
-	  font-size: 3rem;
-	  color: rgb(2, 2, 52);
-	  margin-bottom: 2rem;
-	  margin-top: 4rem;
-	  justify-content: center;
-	  align-items: center;
-	  position: absolute;
-	  font-family: 'Russo One', sans-serif;
-	  margin-left: 40.5rem;
-  }
-  
+
+body {
+	background: linear-gradient(145deg, #1a1a1a 50%, #404040 115%);
+}
+
+.lightning {
+	animation: lighting-animation 2s linear infinite;
+	position: absolute;
+}
+
+.lighting2 {
+	width: 15%;
+	height: 15%;
+}
+
+@keyframes lighting-animation {
+	0% {
+		opacity: 0;
+	}
+
+	5% {
+		opacity: 1;
+	}
+
+	10% {
+		opacity: 0;
+	}
+
+	15% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+.title {
+	font-size: 3rem;
+	color: #a90707;
+	margin-bottom: 2rem;
+	margin-top: 3rem;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	font-family: 'Russo One', sans-serif;
+	margin-left: 40.5rem;
+}
+
+.text-wrapper1 {
+	width: 45%;
+	height: 50%;
+	position: absolute;
+	color: #FFD700;
+	transform: translate(-30%, 40%);
+	font-family: 'Anonymous Pro', monospace;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.text-wrapper2 {
+	width: 45%;
+	height: 50%;
+	position: absolute;
+	color: #FFD700;
+	transform: translate(70%, 40%);
+	font-family: 'Anonymous Pro', monospace;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+#code-red:hover {
+	font-size: 1.25rem;
+	background-color: #FF0000;
+}
+
+@media(max-width: 1440px) {
+	.title {
+		margin-top: 2rem;
+		margin-left: 33rem;
+	}
+
+	.text-wrapper1 {
+		width: 48%;
+		transform: translate(-50%, 40%);
+	}
+}

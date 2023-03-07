@@ -1,24 +1,24 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %} Blue Lock {% endblock %}
+{% block title %} Blue Lock | Prelude 3{% endblock %}
 {% block style %}
-<link rel="stylesheet" href="{% static 'css/prelevel_1.css' %}">
+<link rel="stylesheet" href="{% static 'css/prelevel_2.css' %}">
 {% endblock %}
 {% block content%}
 <input type="number" id="endtime" value="{{team.real_end_time}}" hidden>
-
 <h1 class="title">BLUE LOCK</h1>
 <div class="container">
     <form action="" method="POST">
         {% csrf_token %}
-    <button class="start-button" type="submit" id="enter">NEXT</button>
+    <button class="start-button" type="submit" id="enter">
+        NEXT
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
     </form>
 </div>
- 
 {% endblock %}
 {% block typing %}
- <div class="text-wrapper">
-
+<div class="text-wrapper">
     <p>
         I see that you passed!! You are just one level close to the surprise now. |
         Are you ready? |
@@ -29,8 +29,7 @@
         N and D, the letters you see,|
         With A1Z26, the word will be key.|
     </p>
-
- </div>
+</div>
 {% endblock %}
 {% block hint %}
 {% endblock %}

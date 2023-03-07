@@ -1,10 +1,6 @@
 /*************************************/
 // Low-poly Background animations
 
-
-
-
-
 var refreshDuration = 10000;
         var refreshTimeout;
         var numPointsX;
@@ -189,5 +185,5 @@ const typing = setInterval(() => {
   } else {
     clearInterval(typing);
   }
-}, 20);
+}, 16);
 

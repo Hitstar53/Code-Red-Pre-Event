@@ -1,50 +1,37 @@
 {% extends 'inbase.html' %}
 {% load static %}
-
-{% block title %} OCL Pre-event {% endblock %}
+{% block title %} Blue Lock | Home {% endblock %}
 {% block style %}
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
 {% endblock %}
 
 {% block content%}
 <input type="number" id="endtime" value="{{team.real_end_time}}" hidden>
-<h1 class="title">BLUE LOCK</h1>
-<div class="container">
+<div class="outer">
+  <h1 class="title">BLUE LOCK</h1>
+  <div class="container">
     <form action="" method="POST">
-      
       {% csrf_token %}
-       
       <input type="text" id="team-name" class="input-field" placeholder="Team Name" name="team_name" required>
-      <button class="start-button" type="submit">START</button>
-      
-      
+      <button class="start-button" type="submit">
+        START <i class="fa-solid fa-hourglass-start"></i>
+      </button>
     </form>
-    
-
   </div>
-  
-  
-  
-  
-  
+</div>
 {% endblock %}
 
 {% block typing %}
-
 <div class="text-wrapper" id="text-wrap">
-
-    <p>
-        Write the names of both the team members in following format no spaces and no caps.For eg:jackandjill.
-    </p>
-
+  <p>
+    Write the names of both the team members in following format no spaces and no caps.For eg:jackandjill.
+  </p>
 </div>
-
 {% endblock %}
 
 {% block hint %}
 {% endblock %}
 
 {% block script %}
-
 <script src="{% static 'js/index.js' %}"></script>
 {% endblock %}

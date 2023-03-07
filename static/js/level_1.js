@@ -3,23 +3,22 @@ const imageBox = document.querySelector(".image-box");
 const img = imageBox.querySelector("img");
 const closeBtn = imageBox.querySelector(".close-btn");
 
-img.addEventListener("click", function() {
-  imageBox.style.width = "80%";
-  imageBox.style.height = "80%";
+img.addEventListener("click", function () {
+  imageBox.style.width = "70%";
+  imageBox.style.height = "70%";
   imageBox.style.position = "absolute";
-    // imageBox.style.top = "50%";
-    // imageBox.style.left = "50%";
-    imageBox.style.marginTop = "0";
-    imageBox.style.marginLeft = "-1rem";
-    // imageBox.style.transform = "translate(-50%, -50%)";
+  imageBox.style.marginTop = "0";
+  imageBox.style.marginLeft = "-1rem";
+  imageBox.style.transform = "translate(-50%, -50%)";
   closeBtn.style.display = "block";
 });
 
 closeBtn.addEventListener("click", function() {
   imageBox.style.width = "140px";
   imageBox.style.height = "140px";
-  imageBox.style.marginTop = "-6rem";
-    imageBox.style.marginLeft = "42rem";
+  imageBox.style.marginTop = "0";
+  imageBox.style.marginLeft = "42rem";
+  imageBox.style.transform = "translate(-50%, -145%)";
   closeBtn.style.display = "none";
 });
 

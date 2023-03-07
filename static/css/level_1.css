@@ -1,76 +1,112 @@
+@import url(https://fonts.googleapis.com/css?family=Orbitron:regular,500,600,700,800,900);
+
 .image-box {
-    width: 140px;
-    height: 140px;
-    position: absolute;
-    overflow: hidden;
-    top: 50%;
-    left: 50%;
-    margin-left: 42rem;
-    margin-top: -6rem;
-    
-    transform: translate(-50%, -50%);
-    
-  }
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  margin-left: 42rem;
+  margin-top: -6rem;
+  transform: translate(-50%, -76%);
+}
 
-  
-  .image-box img {
-   
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    cursor: pointer;
-  }
-  
-  .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    color: #fff;
-    display: none;
-  }
-  
-  .numpad {
-    display: grid;
-    position: absolute;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    padding: 10px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .num {
-    font-size: 20px;
-    padding: 10px;
-    border: none;
-    background-color: #ccc;
-    cursor: pointer;
-   
 
-  }
-  
-  .letter {
-    font-size: 20px;
-    padding: 10px;
-    border: none;
-    background-color: #0077cc;
-    color: #fff;
-    cursor: pointer;
-  }
+.image-box img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
 
-  #num-input{
-    
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: -12rem;
-    width: 17rem;
-    background-color:  #009a22;
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  display: none;
+}
 
-  }
-  
+.form-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 325px;
+  height: 460px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.13);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.numpad {
+  display: grid;
+  position: absolute;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+  top: 59%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Orbitron', sans-serif;
+}
+
+.num {
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.num:hover {
+  background-color: #0077cc;
+  color: #fff;
+}
+
+.letter {
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  background-color: #0077cc;
+  color: #fff;
+  cursor: pointer;
+}
+
+.letter:hover {
+  background-color: #0077cc3f;
+}
+
+label {
+  position: absolute;
+  left: 9%;
+  top: 2%;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+}
+
+#num-input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -10rem;
+  width: 17rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  background-color: #009a22;
+}
+
+#num-input:focus {
+  outline: none;
+}

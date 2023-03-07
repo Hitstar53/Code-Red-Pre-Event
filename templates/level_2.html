@@ -1,31 +1,18 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %} Level 1 {% endblock %}
+{% block title %} Blue Lock | Level 1 {% endblock %}
 {% block style %}
-    <link rel="stylesheet" href="{% static 'css/level_2.css' %}">
+<link rel="stylesheet" href="{% static 'css/level_2.css' %}">
 {% endblock %}
 
 {% block content %}
 <input type="number" id="endtime" value="{{team.real_end_time}}" hidden>
-
 <div class="cards-container">
-            
-  <!-- <div class="card" onclick="flipCard(this)">
-      <div class="card-front">
-        <h2>Card 1</h2>
-      </div>
-      <div class="card-back" style="background-color: white; color: black;">
-          <p>
-              The truck's tires started to skid as the driver commuted home from his domestic job site.
-          </p>
-      </div>
-  </div> -->
   <div class="card" onclick="flipCard(this)">
     <div class="card-front">
       <h1>N</h1>
     </div>
     <div class="card-back" id="B1">
-   
     </div>
   </div>
   <div class="card" onclick="flipCard(this)">
@@ -33,24 +20,19 @@
       <h1>D</h1>
     </div>
     <div class="card-back" id="B2">
-      
     </div>
   </div>
-  
 </div>
 <div class="container">
   <form action="" method="POST">
-    
     {% csrf_token %}
-     
     <input type="text" id="answer" class="input-field" placeholder="Word" name="team_name" required>
-     <input type="hidden" value="no" id="bool" name="bool">
-    <button class="start-button" onclick="check()" type="submit" id="enter">SUBMIT</button>
-    
-    
+    <input type="hidden" value="no" id="bool" name="bool">
+    <button class="start-button" onclick="check()" type="submit" id="enter">
+      SUBMIT
+      <i class="fa-solid fa-circle-check"></i>
+    </button>
   </form>
-  
-
 </div>
 
 {% endblock %}
@@ -60,5 +42,5 @@
 {% block hint %}
 {% endblock %}
 {% block script %}
-    <script src="{% static 'js/level_2.js' %}"></script>
+<script src="{% static 'js/level_2.js' %}"></script>
 {% endblock %}

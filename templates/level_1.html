@@ -1,36 +1,36 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %} Level 2 {% endblock %}
+{% block title %} Blue Lock | Level 2 {% endblock %}
 {% block style %}
 <link rel="stylesheet" href="{% static 'css/level_1.css' %}">
 {% endblock %}
 {% block content%}
 <input type="number" id="endtime" value="{{team.real_end_time}}" hidden>
-<form action="" method="POST">
+<div class="form-wrapper">
+  <form action="" method="POST">
     {% csrf_token %}
-<input type="text" id="num-input" name="num" style="position: absolute;">
-<div class="numpad">
-    <button class="num">1 <br>_</button>
-    <button class="num">2 <br>ABC</button>
-    <button class="num">3 <br>DEF</button>
-    <button class="num">4 <br>GHI</button>
-    <button class="num">5 <br>LMN</button>
-    <button class="num">6 <br>OPQ</button>
-
-    <button class="num">7 <br>RST</button>
-    <button class="num">8 <br>UVW</button>
-    <button class="num">9 <br>XYZ</button>
-    <button class="letter"id="del" >Delete</button>
-    <button class="num">0</button>
-    <button class="letter" type="submit" id="enter" >Enter</button>
-  </div>
-</form>
-  
+    <label for="num-input">Enter the Code</label>
+    <input type="text" id="num-input" name="num" style="position: absolute;">
+    <div class="numpad">
+      <button class="num">1 <br>_</button>
+      <button class="num">2 <br>ABC</button>
+      <button class="num">3 <br>DEF</button>
+      <button class="num">4 <br>GHI</button>
+      <button class="num">5 <br>LMN</button>
+      <button class="num">6 <br>OPQ</button>
+      <button class="num">7 <br>RST</button>
+      <button class="num">8 <br>UVW</button>
+      <button class="num">9 <br>XYZ</button>
+      <button class="letter" id="del">Delete</button>
+      <button class="num">0</button>
+      <button class="letter" type="submit" id="enter">Enter</button>
+    </div>
+  </form>
+</div>
 <div class="image-box">
-    <img src="{% static 'assets/images/paper.png' %}" alt="Your image">
-    <span class="close-btn">&times;</span>
-  </div>
-  
+  <img src="{% static 'assets/images/paper.png' %}" alt="Your image">
+  <span class="close-btn">&times;</span>
+</div>
 
 {% endblock %}
 {% block typing %}

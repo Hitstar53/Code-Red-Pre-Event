@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %} Blue Lock {% endblock %}
+{% block title %} Blue Lock | Prelude 1{% endblock %}
 {% block style %}
 <link rel="stylesheet" href="{% static 'css/prelevel_0.css' %}">
 {% endblock %}
@@ -10,30 +10,29 @@
 <div class="container">
     <form action="" method="POST">
         {% csrf_token %}
-    <button class="start-button" type="submit" id="enter">Follow The White Rabit</button>
+    <button class="start-button" type="submit" id="enter">
+        Follow The White Rabbit <i class="fa-solid fa-arrow-right"></i>
+    </button>
     </form>
 </div>
 {% endblock %}
 {% block typing %}
 <div class="text-wrapper" id="wrap" style="margin-left: 17rem;">
     <p>
-        You are a team of agents working for a secret government agency.|There are romours that something big is going to happen in the city of Mumbai.|
-        You have recived an anonymous link on your email.The email says the follows: |
+        You are a team of agents working for a secret government agency.|There are rumours that something big is going to happen in the city of Mumbai.|
+        You have received an anonymous link on your email.The email says the follows: |
         |
         Hello!! My little Alices. You all live in your safe wonderland named Mumbai. |
-        But I have a little surpirsed planned for you.|
-        Here, I am the White Rabit and The Queen of Hearts at the same time.|
+        But I have a little surprised planned for you.|
+        Here, I am the White Rabbit and The Queen of Hearts at the same time.|
         So click on the button below and grab a chance to save your wonderland!!|
         |
-
-
-
-
-
-       
     </p>
 {% endblock %}
 {% block hint %}
+<p>
+    You have to click on the button below to start the game.
+</p>
 {% endblock %}
 {% block script %}
 <script src="{% static 'js/prelevel_0.js' %}"></script>

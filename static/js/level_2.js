@@ -3,7 +3,7 @@ function flipCard(card) {
   }
 
 const words =[
-    {id:1,word:'crypt',N:15912581,D:500000000},
+    {id:1,word:'bash',N:2011908,D:50000000},
     {id:2,word:'omen',N:7565257,D:50000000},
     {id:3,word:'lurk',N:12211811,D:100000000},
     {id:4,word:'coven',N:157610257,D:5000000000},

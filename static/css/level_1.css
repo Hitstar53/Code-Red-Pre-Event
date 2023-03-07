@@ -110,3 +110,10 @@ label {
 #num-input:focus {
   outline: none;
 }
+
+@media(max-width: 1440px){
+  .image-box {
+    margin-left: 32rem;
+    margin-top: -6rem;
+  }
+}

@@ -15,38 +15,17 @@
 </head>
 <body>
     <div id = "bg">
+        {% comment %} 
         <div id="wrapper">
+            {% block timer %}
             <div id="2h-countdown"></div>
             <div id="stopwatch"><span id="minutes">00</span>:<span id="seconds">00</span>:<span id="tens">00</span></div>
-            <!-- Modal trigger button -->
-            <button id="hint" data-bs-toggle="modal" data-bs-target="#hintModal">
-                TIMER
-                <i class="fa-regular fa-clock"></i>
-            </button>
-        </div>
+        </div> 
+        {% endcomment %}
         {% block content %}
         {% endblock %}
-        <!-- Modal -->
         {% block typing %}
         {% endblock %}
-        <div class="modal fade" id="hintModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="hintModalLabel">
-                            Here's a Hint!
-                            <i class="fa-regular fa-lightbulb"></i>
-                        </h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        {% block hint %}
-                        <div id="2h-countdown"></div>
-                        {% endblock %}
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     {% block script %}
     {% endblock %}

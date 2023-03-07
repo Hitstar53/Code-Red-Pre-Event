@@ -56,3 +56,26 @@
 .text-wrapper {
   transform: translate(20%, 50%);
 }
+
+@media(max-width: 1440px)
+{
+  .title {
+    font-size: 3rem;
+    color: rgb(2, 2, 52);
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-family: 'Russo One', sans-serif;
+    margin-left: 33rem;
+  }
+
+  .start-button {
+    margin-left: -3.75rem;
+  }
+
+  .text-wrapper {
+    transform: translate(15%, 50%);
+  }
+}

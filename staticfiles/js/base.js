@@ -125,42 +125,42 @@ var refreshDuration = 10000;
         
 // End of Low-poly background animations
 
-function countdown(elementName, hours, minutes, seconds) {
-    var element, endTime, hours, mins, msLeft, time;
-    function twoDigits(n) {
-        return (n <= 9 ? "0" + n : n);
-    }
-    function updateTimer() {
-        msLeft = endTime - (+new Date);
-        if (msLeft < 1000) {
-            element.innerHTML = "Time is up!";
-        } else {
-            time = new Date(msLeft);
-            hours = time.getUTCHours();
-            mins = time.getUTCMinutes();
-            element.innerHTML = (twoDigits(hours) ? twoDigits(hours) + ':' + twoDigits(mins) : mins) + ':' + twoDigits(time.getUTCSeconds());
-            setTimeout(updateTimer, time.getUTCMilliseconds() + 500);
-        }
-    }
-    element = document.getElementById(elementName);
-    endTime = (+new Date) + 1000 * (3600 * hours + 60 * minutes + seconds) + 500;
-    updateTimer();
-}
+// function countdown(elementName, hours, minutes, seconds) {
+//     var element, endTime, hours, mins, msLeft, time;
+//     function twoDigits(n) {
+//         return (n <= 9 ? "0" + n : n);
+//     }
+//     function updateTimer() {
+//         msLeft = endTime - (+new Date);
+//         if (msLeft < 1000) {
+//             element.innerHTML = "Time is up!";
+//         } else {
+//             time = new Date(msLeft);
+//             hours = time.getUTCHours();
+//             mins = time.getUTCMinutes();
+//             element.innerHTML = (twoDigits(hours) ? twoDigits(hours) + ':' + twoDigits(mins) : mins) + ':' + twoDigits(time.getUTCSeconds());
+//             setTimeout(updateTimer, time.getUTCMilliseconds() + 500);
+//         }
+//     }
+//     element = document.getElementById(elementName);
+//     endTime = (+new Date) + 1000 * (3600 * hours + 60 * minutes + seconds) + 500;
+//     updateTimer();
+// }
 
 
 
-let time_now = parseInt(new Date().getUTCSeconds());
-let time_end = parseInt(parseInt(document.getElementById("endtime").value)/1000000);
-time_diff = time_end - time_now;
-console.log(time_now,time_end,time_diff);
-//time diff is in seconds
-let hr = Math.floor(time_diff/3600);
-let min = Math.floor((time_diff%3600)/60);
-let sec = Math.floor((time_diff%3600)%60);
-console.log(hr, min, sec);
+// let time_now = parseInt(new Date().getUTCSeconds());
+// let time_end = parseInt(parseInt(document.getElementById("endtime").value)/1000000);
+// time_diff = time_end - time_now;
+// console.log(time_now,time_end,time_diff);
+// //time diff is in seconds
+// let hr = Math.floor(time_diff/3600);
+// let min = Math.floor((time_diff%3600)/60);
+// let sec = Math.floor((time_diff%3600)%60);
+// console.log(hr, min, sec);
 
 
-countdown("2h-countdown", hr, min, sec);
+// countdown("2h-countdown", hr, min, sec);
 // stopwatch("stopwatch");
 
 // Stopwatch = 10 mins
@@ -185,5 +185,5 @@ const typing = setInterval(() => {
   } else {
     clearInterval(typing);
   }
-}, 16);
+}, 25);
 

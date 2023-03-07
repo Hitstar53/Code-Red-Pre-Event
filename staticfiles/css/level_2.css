@@ -126,3 +126,15 @@ form {
 .card-flipped {
   transform: rotateY(180deg);
 }
+
+@media(max-width: 1440px)
+{
+  .container {
+    margin-left: 6.2rem;
+    margin-top: 20rem;
+  }
+
+  .cards-container {
+    transform: translate(-40%, -60%);
+  }
+}

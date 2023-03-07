@@ -1,6 +1,5 @@
 {% extends 'inbase.html' %}
 {% load static %}
-
 {% block title %} Blue Lock | Code Red {% endblock %}
 {% block style %}
 <link rel="stylesheet" href="{% static 'css/last.css' %}">
@@ -8,42 +7,39 @@
 {% block content%}
 <input type="number" id="endtime" value="{{team.real_end_time}}" hidden>
 <h1 class="title">CODE RED</h1>
-<audio class="audio-effect">
-        <source src="{% static 'assets/donnerre2.mp3' %}" type="audio/mpeg">
-</audio>
 <img class="lightning" src="http://pngimg.com/uploads/lightning/lightning_PNG38.png" alt="lightning">
 {% endblock %}
 {% block typing %}
 <div class="text-wrapper1 text-wrapper" id="text-wrap" style="margin-left: 27rem;">
         <p style="font-size: 0.8em;">
-        I, the terror that lurks in the night,|
-        Have sown the seeds of a fateful plight.|
-        A bomb planted deep within the city's dreams,|
-        Its ticking clock, the harbinger of its screams.|
-        |
-        To you, my dear agents, I bring this game,|
-        A challenge that will surely test your aim.|
-        The prize, the city's safety, the cost, its soul,|
-        A battle between you and me, to take its toll.|
-        |
-        The rules are simple, find and diffuse,|
-        The ticking time bomb, before it's use.|
-        I'll be your guide, your opponent too,|
-        In this game of life, where only one will come through.|
-        |
+                I, the terror that lurks in the night,|
+                Have sown the seeds of a fateful plight.|
+                A bomb planted deep within the city's dreams,|
+                Its ticking clock, the harbinger of its screams.|
+                |
+                To you, my dear agents, I bring this game,|
+                A challenge that will surely test your aim.|
+                The prize, the city's safety, the cost, its soul,|
+                A battle between you and me, to take its toll.|
+                |
+                The rules are simple, find and diffuse,|
+                The ticking time bomb, before it's use.|
+                I'll be your guide, your opponent too,|
+                In this game of life, where only one will come through.|
+                |
         </p>
 </div>
 <div class="text-wrapper2" id="text-wrap2" style="margin-left: 27rem;">
         <p style="font-size: 0.8em;">
-        The button waits, to start the show,|
-        The curtains rise, the clock starts to glow.|
-        Tick! Tock! Tick! Tock! Time is running low,|
-        The city awaits, its fate to be known.|
-        |
-        So, go ahead, make your move,|
-        Save the city, earn its love.|
-        But beware, I am not what I seem,|
-        For I am a monster, a psychopathic dream.|
+                The button waits, to start the show,|
+                The curtains rise, the clock starts to glow.|
+                Tick! Tock! Tick! Tock! Time is running low,|
+                The city awaits, its fate to be known.|
+                |
+                So, go ahead, make your move,|
+                Save the city, earn its love.|
+                But beware, I am not what I seem,|
+                For I am a monster, a psychopathic dream.|
         </p>
         <a name="code-red-link" id="code-red" class="btn btn-danger" href="https://unstop.com/o/MkJfR04?lb=mxSUsjZ" role="button">
                 Proceed to Code Red <i class="fa-solid fa-arrow-right"></i>
@@ -54,18 +50,4 @@
 {% endblock %}
 {% block script %}
 <script src="{% static 'js/last.js' %}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js"></script>
-<script>
-    var sound = new Howl({
-      src: ["{% static 'assets/donnerre2.mp3' %}"],
-      volume: 1,
-      onend: function () {
-        alert('Finished!');
-      }
-    });
-    sound.play()
-</script>
 {% endblock %}
-
-
-

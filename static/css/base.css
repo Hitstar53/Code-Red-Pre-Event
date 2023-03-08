@@ -12,6 +12,7 @@ body{
     width: 100vw;
     height: 100vh;
 }
+
 #bg
 {	
 	position:fixed;
@@ -22,11 +23,13 @@ body{
   padding: 0;
   z-index: 2;
 }
+
 .modal-content {
   color: yellowgreen;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.13);
 }
+
 #wrapper {
   position: absolute;
   top: 25px;

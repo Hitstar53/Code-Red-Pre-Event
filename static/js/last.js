@@ -6,7 +6,7 @@ crbtn.style.display = 'none';
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
-sleep(14000).then(() => {
+sleep(20000).then(() => {
   const textWrapper1 = document.querySelector('.text-wrapper2 p');
   textWrapper1.style.display = 'block';
   let text4 = textWrapper1.innerHTML;
@@ -27,7 +27,7 @@ sleep(14000).then(() => {
   }, 16);
 });
 
-sleep(22000).then(() => {
+sleep(27000).then(() => {
   const crbtn = document.querySelector('#code-red');
   crbtn.style.display = '';
 });

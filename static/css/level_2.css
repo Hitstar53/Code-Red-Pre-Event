@@ -127,6 +127,18 @@ form {
   transform: rotateY(180deg);
 }
 
+.modal {
+  backdrop-filter: blur(10px);
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
 @media(max-width: 1440px)
 {
   .container {

@@ -85,9 +85,7 @@ def level2(request):
     if request.method == 'POST':
         bl = request.POST.get('bool')
         print(bl)
-        if bl == "no":
-            return redirect('level2')
-        elif bl == "yes":
+        if bl == "yes":
             team = Team.objects.get(user=request.user)
             t = int(datetime.now().microsecond)
             team.time_taken = str(t - int(team.time_taken))

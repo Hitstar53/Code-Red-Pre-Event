@@ -102,3 +102,26 @@ body{
 #stopwatch {
   display: none;
 }
+
+@media (max-width: 768px) {
+  #wrapper {
+    width: 90%;
+    max-width: 90%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    white-space: normal;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #next {
+      position: static;
+      transform: none;
+      margin-top: 20px;
+  }
+  body{
+    overflow: scroll;
+    scroll-behavior: auto;
+  }
+}

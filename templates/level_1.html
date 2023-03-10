@@ -10,7 +10,7 @@
   <form action="" method="POST">
     {% csrf_token %}
     <label for="num-input">Enter the Code</label>
-    <input type="text" id="num-input" name="num" style="position: absolute;">
+    <input type="number" id="num-input" name="num" style="position: absolute;" readonly>
     <div class="numpad">
       <button class="num">1 <br>_</button>
       <button class="num">2 <br>ABC</button>

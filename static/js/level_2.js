@@ -1,1 +1,106 @@
-function _0x1d50(){const _0x42f2b7=['random','hex','backgroundColor','color','style','classList','log','643866TLsXFA','black','minutes_2','243lbTASu','coven','bash','yes','getElementById','bool','seconds','1588472OUonMs','innerHTML','omen','find','yellow','stopwatch','627420RzPTXb','35hofIFa','seconds_2','fate','setItem','Your\x20answer\x20is\x20incorrect!</i>','698786AUBSeZ','3fxZjhB','tens','card-flipped','tens_2','word','answer','minutes','value','onbeforeunload','toggle','toString','.modal-body','lurk','2765630aTEBqJ','466812LGCffB','484924dtOJsP','getItem','clear'];_0x1d50=function(){return _0x42f2b7;};return _0x1d50();}const _0x5ef83e=_0x9d4c;function _0x9d4c(_0x13f540,_0x377c77){const _0x1d5050=_0x1d50();return _0x9d4c=function(_0x9d4c7d,_0x527a53){_0x9d4c7d=_0x9d4c7d-0x9d;let _0x2b4c68=_0x1d5050[_0x9d4c7d];return _0x2b4c68;},_0x9d4c(_0x13f540,_0x377c77);}(function(_0x465683,_0x6eb299){const _0x1fc509=_0x9d4c,_0x5c28ad=_0x465683();while(!![]){try{const _0x3de979=parseInt(_0x1fc509(0xa5))/0x1+parseInt(_0x1fc509(0xc5))/0x2+-parseInt(_0x1fc509(0xc6))/0x3*(parseInt(_0x1fc509(0xa4))/0x4)+parseInt(_0x1fc509(0xa3))/0x5+-parseInt(_0x1fc509(0xaf))/0x6*(-parseInt(_0x1fc509(0xc0))/0x7)+parseInt(_0x1fc509(0xb9))/0x8+-parseInt(_0x1fc509(0xb2))/0x9*(parseInt(_0x1fc509(0xbf))/0xa);if(_0x3de979===_0x6eb299)break;else _0x5c28ad['push'](_0x5c28ad['shift']());}catch(_0x31354d){_0x5c28ad['push'](_0x5c28ad['shift']());}}}(_0x1d50,0x4c20c));function flipCard(_0x1ce8c9){const _0x15c890=_0x9d4c;_0x1ce8c9[_0x15c890(0xad)][_0x15c890(0x9f)](_0x15c890(0xc8));}const words=[{'id':0x1,'word':_0x5ef83e(0xb4),'N':0x1eb304,'D':0x2faf080},{'id':0x2,'word':_0x5ef83e(0xbb),'N':0x736fc9,'D':0x2faf080},{'id':0x3,'word':_0x5ef83e(0xa2),'N':0xba5663,'D':0x5f5e100},{'id':0x4,'word':_0x5ef83e(0xb3),'N':0x964f111,'D':0x12a05f200},{'id':0x5,'word':_0x5ef83e(0xc2),'N':0x1258e1,'D':0x1312d00},{'id':0x6,'word':'fear','N':0xc6bf23,'D':0x2faf080},{'id':0x7,'word':_0x5ef83e(0xa9),'N':0x1d543,'D':0x3d090},{'id':0x8,'word':'dock','N':0x3f5427,'D':0x5f5e100}];randomid=Math['floor'](Math[_0x5ef83e(0xa8)]()*0x8)+0x1,console[_0x5ef83e(0xae)](randomid);const word=words[_0x5ef83e(0xbc)](_0x4a2b99=>_0x4a2b99['id']===randomid),N=word['N'],D=word['D'],word1=word[_0x5ef83e(0xca)];B1=document['getElementById']('B1'),B2=document[_0x5ef83e(0xb6)]('B2'),B1[_0x5ef83e(0xba)]=N,B2[_0x5ef83e(0xba)]=D;const mbody=document['querySelector'](_0x5ef83e(0xa1));function check(){const _0x9a1443=_0x5ef83e;document[_0x9a1443(0xb6)](_0x9a1443(0xcb))[_0x9a1443(0x9d)]==word1?(document[_0x9a1443(0xb6)](_0x9a1443(0xb7))[_0x9a1443(0x9d)]=_0x9a1443(0xb5),mbody[_0x9a1443(0xba)]='Correct'):mbody[_0x9a1443(0xba)]=_0x9a1443(0xc4);}function stopwatch(_0xbe07d4){const _0x5660bf=_0x5ef83e;var _0x345bdd=document[_0x5660bf(0xb6)](_0x5660bf(0xc7)),_0x1cc8cc=document[_0x5660bf(0xb6)](_0x5660bf(0xb8)),_0x48d3fb=document[_0x5660bf(0xb6)](_0x5660bf(0xcc));const _0x5bcc8d=document[_0x5660bf(0xb6)]('hint');var _0x2f5ce5=parseInt(localStorage['getItem'](_0x5660bf(0xc9)))||0x0,_0x3e4173=parseInt(localStorage[_0x5660bf(0xa6)](_0x5660bf(0xc1)))||0x0,_0x535707=parseInt(localStorage[_0x5660bf(0xa6)](_0x5660bf(0xb1)))||0x0;_0x345bdd[_0x5660bf(0xba)]=_0x2370a2(_0x2f5ce5),_0x1cc8cc[_0x5660bf(0xba)]=_0x2370a2(_0x3e4173),_0x48d3fb[_0x5660bf(0xba)]=_0x2370a2(_0x535707);var _0x3f844c=setInterval(_0x5e0d14,0xa);function _0x5e0d14(){const _0x169254=_0x5660bf;_0x2f5ce5++,_0x2f5ce5>0x63&&(_0x3e4173++,_0x2f5ce5=0x0),_0x3e4173>0x3b&&(_0x535707++,_0x3e4173=0x0),localStorage[_0x169254(0xc3)](_0x169254(0xc9),_0x2f5ce5),localStorage[_0x169254(0xc3)](_0x169254(0xc1),_0x3e4173),localStorage[_0x169254(0xc3)](_0x169254(0xb1),_0x535707),_0x345bdd[_0x169254(0xba)]=_0x2370a2(_0x2f5ce5),_0x1cc8cc[_0x169254(0xba)]=_0x2370a2(_0x3e4173),_0x48d3fb['innerHTML']=_0x2370a2(_0x535707),_0x535707>0x0&&(_0x5bcc8d['disabled']=![],_0x5bcc8d[_0x169254(0xac)]['border']='none',_0x5bcc8d[_0x169254(0xac)][_0x169254(0xab)]=_0x169254(0xb0),_0x5bcc8d[_0x169254(0xac)][_0x169254(0xaa)]=_0x169254(0xbd),_0x5bcc8d[_0x169254(0xac)]['cursor']='pointer');}function _0x2370a2(_0x47bb04){const _0x4f4acc=_0x5660bf;return _0x47bb04[_0x4f4acc(0xa0)]()['padStart'](0x2,'0');}}window[_0x5ef83e(0x9e)]=function(){localStorage['clear']();},stopwatch(_0x5ef83e(0xbe)),localStorage[_0x5ef83e(0xa7)]();
+function flipCard(card) {
+    card.classList.toggle('card-flipped');
+  }
+
+const words =[
+    {id:1,word:'chip',N:770229,D:25000000},
+    {id:2,word:'omen',N:7565257,D:50000000},
+    {id:3,word:'lurk',N:12211811,D:100000000},
+    {id:4,word:'coven',N:157610257,D:5000000000},
+    {id:5,word:'fate',N:1202401,D:20000000},
+    {id:6,word:'fear',N:3025059,D:50000000},
+    {id:7,word:'hex',N:20131,D:250000},
+    {id:8,word:'dock',N:4150311,D:100000000},
+     
+
+
+]
+
+randomid= Math.floor(Math.random() * 8) + 1;
+console.log(randomid);
+const word = words.find(word => word.id === randomid);
+const N = word.N;
+const D = word.D;
+const word1 = word.word;
+B1 = document.getElementById("B1");
+B2 = document.getElementById("B2");
+B1.innerHTML = N;
+B2.innerHTML= D;
+
+function check(){
+    var input_value = document.getElementById('answer').value;
+    input_value = input_value.toLowerCase();
+    if (input_value=== word1){
+        document.getElementById('bool').value ="yes"
+        alert("Correct");
+    }
+    else{
+        alert("Incorrect");
+    }
+
+}
+
+function stopwatch(elementName) {
+    var appendTens = document.getElementById("tens");
+    var appendSeconds = document.getElementById("seconds");
+    var appendMinutes = document.getElementById("minutes");
+    const btn = document.getElementById("hint");
+  
+    // Load the timer values from local storage
+    var tens = parseInt(localStorage.getItem("tens_2")) || 0;
+    var seconds = parseInt(localStorage.getItem("seconds_2")) || 0;
+    var minutes = parseInt(localStorage.getItem("minutes_2")) || 0;
+  
+    // Display the timer values
+    appendTens.innerHTML = formatTime(tens);
+    appendSeconds.innerHTML = formatTime(seconds);
+    appendMinutes.innerHTML = formatTime(minutes);
+  
+    // Start the timer
+    var interval = setInterval(startTimer, 10);
+  
+    function startTimer() {
+      tens++;
+      if (tens > 99) {
+        seconds++;
+        tens = 0;
+      }
+      if (seconds > 59) {
+        minutes++;
+        seconds = 0;
+      }
+      // Save the timer values to local storage
+      localStorage.setItem("tens_2", tens);
+      localStorage.setItem("seconds_2", seconds);
+      localStorage.setItem("minutes_2", minutes);
+  
+      // Display the timer values
+      appendTens.innerHTML = formatTime(tens);
+      appendSeconds.innerHTML = formatTime(seconds);
+      appendMinutes.innerHTML = formatTime(minutes);
+  
+      // Enable the button when the timer reaches 1 minute
+      if (minutes > 0) {
+        btn.disabled = false;
+        btn.style.border = "none";
+        btn.style.color = "black";
+        btn.style.backgroundColor = "yellow";
+        btn.style.cursor = "pointer";
+      }
+    }
+  
+    // Format the time value with leading zeros
+    function formatTime(time) {
+      return time.toString().padStart(2, "0");
+    }
+  }
+  
+  window.onbeforeunload = function() {
+    localStorage.clear();
+  }
+  
+  
+  
+  stopwatch("stopwatch");
+  localStorage.clear();
+

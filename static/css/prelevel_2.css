@@ -98,3 +98,15 @@
         z-index: 4;
     }
 }
+
+@media(max-width: 786px){
+  
+    .start-button{
+        margin-left: -10.5rem;
+        
+    }
+    .title{
+		margin-left: 1.5rem;
+		
+	}
+  }

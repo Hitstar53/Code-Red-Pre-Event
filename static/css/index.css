@@ -109,3 +109,45 @@ form {
 		font-family: 'Anonymous Pro', monospace;
 	}
 }
+
+
+@media (max-width: 768px) {
+	#text-wrap{
+		width: 80%;
+	  max-width: 90%;
+	  overflow-y: scroll;
+	  -webkit-overflow-scrolling: touch;
+	  white-space: normal;
+	  font-size: 15px;
+	  margin-left: 1rem;
+	}
+  
+	#next {
+		position: static;
+		transform: none;
+		margin-top: 20px;
+	}
+	body{
+	  overflow: scroll;
+	  scroll-behavior: auto;
+	}
+	.container{
+		height: 100%;
+		margin-left: -2rem;
+	}
+	/* .input-field{
+		margin-left: 5rem;
+		width: 15rem;
+	} */
+
+	.input-field{
+		width: 15rem;
+	}
+	.title{
+		margin-left: 2rem;
+		
+	}
+	.start-button{
+		margin-left: 4rem;
+	}
+  }

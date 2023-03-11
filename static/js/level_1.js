@@ -11,6 +11,26 @@ img.addEventListener("click", function () {
   imageBox.style.marginLeft = "-1rem";
   imageBox.style.transform = "translate(-50%, -50%)";
   closeBtn.style.display = "block";
+  if (window.innerWidth < 768) {
+    //change the image inside the box by changing the src attribute
+    //don't go in level 1 folder
+    img.src = "https://i.ibb.co/C7HPNtc/paper-mobile.png";
+    //append the close button
+
+                        
+    imageBox.style.width = "300px";
+    imageBox.style.height = "300px";
+    imageBox.style.marginLeft = "0.2rem";
+    //bring the close button to the middle
+    // closeBtn.style.marginLeft = "130px";
+    // closeBtn.style.marginTop = "-10px";
+    // closeBtn.style.fontSize = "30px";
+    // closeBtn.style.cursor = "pointer";
+
+   
+ 
+
+  }
 });
 
 closeBtn.addEventListener("click", function() {
@@ -20,7 +40,22 @@ closeBtn.addEventListener("click", function() {
   imageBox.style.marginLeft = "42rem";
   imageBox.style.transform = "translate(-50%, -145%)";
   closeBtn.style.display = "none";
+ 
+  // if the screen is small then image is at other position
+  if (window.innerWidth < 768) {
+    imageBox.style.marginLeft = "0rem";
+    imageBox.style.transform = "translate(-50%, -50%)";
+    imageBox.style.marginTop = "15rem";
+    imageBox.style.width = "140px";
+    imageBox.style.height = "140px";
+    
+    
+    
+  }
+
 });
+
+
 
 
 const numpad = document.querySelector(".numpad");

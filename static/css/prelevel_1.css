@@ -79,3 +79,10 @@
     transform: translate(15%, 50%);
   }
 }
+
+@media(max-width:786px)
+{
+  .start-button {
+    margin-left: -10rem;
+  }
+}

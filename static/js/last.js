@@ -18,9 +18,9 @@ if (window.innerWidth < 768) {
   // create a buuton and append to to textWrapper1
 
   btn.style.height = '50px';
-  btn.style.width = '200px';
+  btn.style.width = '220px';
   btn.style.marginTop = '2rem';
-  btn.style.marginLeft = '2rem';
+  btn.style.marginLeft = '1.5rem';
 }
 else {
 btn.style.display = 'none';

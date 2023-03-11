@@ -150,3 +150,31 @@ form {
     transform: translate(-40%, -60%);
   }
 }
+
+@media(max-width:786px)
+{
+  .container {
+    margin-left: 6.2rem;
+    margin-top: 20rem;
+    z-index: 5;
+  }
+
+  .cards-container {
+    transform: translate(-40%, -60%);
+    margin-left: -1.6rem;
+    z-index: 4;
+  }
+  .card {
+    width: 100px;
+    height: 100px;
+  }
+  .input-field {
+    width: 200px;
+    margin-left: -12rem;
+    margin-top: 12rem;
+  }
+  .start-button {
+    margin-left: -12rem;
+    margin-top: 16rem;
+  }
+}

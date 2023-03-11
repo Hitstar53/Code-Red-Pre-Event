@@ -5,7 +5,7 @@ if (window.innerWidth < 768) {
   textw.style.height = '90%';
   textw.style.width = '90%';
   textw.style.marginTop = '-6rem';
-  textw.style.marginLeft = '10rem';
+  textw.style.marginLeft = '13rem';
   textWrapper1.innerHTML = ` The button waits, to start the show,|
   The curtains rise, the clock starts to glow.|
   Tick! Tock! Tick! Tock! Time is running low,|

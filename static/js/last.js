@@ -1,3 +1,28 @@
+const btn = document.querySelector('#code-re');
+if (window.innerWidth < 768) {
+  const textWrapper1 = document.querySelector('.text-wrapper1 p');
+  const textw = document.querySelector('.text-wrapper1');
+  textw.style.height = '90%';
+  textw.style.width = '90%';
+  textw.style.marginTop = '-6rem';
+  textWrapper1.innerHTML = ` The button waits, to start the show,|
+  The curtains rise, the clock starts to glow.|
+  Tick! Tock! Tick! Tock! Time is running low,|
+  The city awaits, its fate to be known.|
+  |
+  So, go ahead, make your move,|
+  Save the city, earn its love.|
+  But beware, I am not what I seem,|
+  For I am a monster, a psychopathic dream.|`;
+  // create a buuton and append to to textWrapper1
+
+  btn.style.height = '50px';
+  btn.style.width = '200px';
+  btn.style.marginTop = '2rem';
+  btn.style.marginLeft = '2rem';
+}
+else {
+btn.style.display = 'none';
 const tw = document.querySelector('.text-wrapper2 p');
 tw.style.display = 'none';
 const crbtn = document.querySelector('#code-red');
@@ -31,4 +56,6 @@ sleep(27000).then(() => {
   const crbtn = document.querySelector('#code-red');
   crbtn.style.display = '';
 });
-document.getElementById('.audio-effect').play();
+document.getElementById('.audio-effect').play();}
+
+// change text wrapper 1 html if the device is mobile

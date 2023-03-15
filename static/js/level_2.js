@@ -10,11 +10,7 @@ const words =[
     {id:5,word:'fate',N:1202401,D:20000000},
     {id:6,word:'fear',N:3025059,D:50000000},
     {id:7,word:'hex',N:20131,D:250000},
-    {id:8,word:'dock',N:4150311,D:100000000},
-     
-
-
-]
+    {id:8,word:'dock',N:4150311,D:100000000},]
 
 randomid= Math.floor(Math.random() * 8) + 1;
 console.log(randomid);
@@ -27,18 +23,39 @@ B2 = document.getElementById("B2");
 B1.innerHTML = N;
 B2.innerHTML= D;
 
+$(document).ready(function() {
+  $(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+
 function check(){
     var input_value = document.getElementById('answer').value;
     input_value = input_value.toLowerCase();
     if (input_value=== word1){
-        document.getElementById('bool').value ="yes"
-        alert("Correct");
+        document.getElementById('bool').value ="yes";
+        document.getElementById('myform').submit();
+
+        
     }
     else{
-        alert("Incorrect");
+      // show the modal 
+
+      const try_again = document.querySelector('.btn-danger');
+      try_again.addEventListener('click',()=>{
+
+        window.location.reload();
+
+      });
     }
 
 }
+
+const sbtbtn = document.querySelector('#enter');
+sbtbtn.addEventListener('click',check);
 
 function stopwatch(elementName) {
     var appendTens = document.getElementById("tens");

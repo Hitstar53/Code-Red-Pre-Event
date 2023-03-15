@@ -88,7 +88,7 @@ form {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  margin-top: 4rem;
+  margin-top: 7rem;
   margin-left: 2rem;
   /*bring it below input box*/
   z-index: 4;
@@ -175,6 +175,6 @@ form {
   }
   .start-button {
     margin-left: -12rem;
-    margin-top: 16rem;
+    margin-top: 18rem;
   }
 }

@@ -83,14 +83,17 @@ def prelevel2(request):
 
 def level2(request):
     if request.method == 'POST':
-        bl = request.POST.get('bool')
-        print(bl)
-        if bl == "yes":
-            team = Team.objects.get(user=request.user)
-            t = int(datetime.now().microsecond)
-            team.time_taken = str(t - int(team.time_taken))
-            team.save()
-            return redirect('last')
+        
+            bl = request.POST.get('bool')
+            print(bl)
+            if bl == "yes":
+                team = Team.objects.get(user=request.user)
+                t = int(datetime.now().microsecond)
+                team.time_taken = str(t - int(team.time_taken))
+                team.save()
+                return redirect('last')
+            
+
     if request.user.groups.filter(name='Level 2').exists():
         team = Team.objects.get(user=request.user)
         endtime = team.real_end_time

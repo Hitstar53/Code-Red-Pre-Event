@@ -20,7 +20,7 @@ if (window.innerWidth < 768) {
   btn.style.height = '50px';
   btn.style.width = '220px';
   btn.style.marginTop = '2rem';
-  btn.style.marginLeft = '1.5rem';
+  btn.style.marginLeft = '-0rem';
 }
 else {
 btn.style.display = 'none';

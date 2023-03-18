@@ -37,7 +37,18 @@ function check(){
     input_value = input_value.toLowerCase();
     if (input_value=== word1){
         document.getElementById('bool').value ="yes";
-        document.getElementById('myform').submit();
+        const modal_head = document.querySelector('.modal-title');
+        modal_head.innerHTML = "Correct!!";
+       const modal_body = document.querySelector('.modal-body');
+        modal_body.innerHTML = "You have successfully completed the level. Click on the button below to proceed.";
+        const bt = document.querySelector('#bt');
+        bt.innerHTML = "Proceed";
+        bt.addEventListener('click',()=>{
+          document.getElementById('myform').submit();
+        })
+
+
+        // 
 
         
     }

@@ -34,6 +34,12 @@ ALLOWED_HOSTS = [
 
 CSRF_TRUSTED_ORIGINS = [
     'https://code-red-pre-event-production.up.railway.app',
+    'https://blue-lock-d1.up.railway.app',
+    'https://blue-lock-d2.up.railway.app',
+    'https://blue-lock.up.railway.app',
+    'https://blue-lock-d2.up.railway.app/',
+    'https://blue-lock.up.railway.app/',
+    'https://blue-lock-d1.up.railway.app/',
     'https://code-red-pre-event-production.up.railway.app/',
 ]
 
@@ -55,7 +61,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
